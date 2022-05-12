@@ -1,4 +1,364 @@
-# Getting Started with Create React App
+<!-- Project Start -->
+
+# Project Name: `Doctors Portal`
+
+# Dependency Use
+
+## Tailwind CSS
+
+### Create React App
+
+Start by creating a new React project with Create React App if you don't have one already set up.
+
+```bash
+npx create-react-app my-project
+cd my-project
+```
+
+### Install Tailwind CSS
+
+Install `tailwindcss` and its peer dependencies via npm, and then run the init command to generate both `tailwind.config.js` and `postcss.config.js`.
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+### Configure your template paths
+
+Add the paths to all of your template files in your `tailwind.config.js` file.
+
+```js
+module.exports = {
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+### Add the Tailwind directives to your CSS
+
+Add the @tailwind directives for each of `Tailwind’s`layers to your `./src/index.css` file.
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+### Start your build process
+
+Run your build process with `npm run start`.
+
+```bash
+ npm run start
+```
+
+### Start using Tailwind in your project
+
+Start using Tailwind’s utility classes to style your content.
+
+```js
+export default function App() {
+  return (
+    <div>
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    </div>
+  );
+}
+```
+
+## daisyUI as a Tailwind CSS plugin
+
+You need Node.js and Tailwind CSS installed.
+
+### Install daisyUI:
+
+```bash
+npm i daisyui
+```
+
+### Add script
+
+Then add daisyUI to your `tailwind.config.js` files:
+
+```js
+module.exports = {
+  //...
+  plugins: [require('daisyui')],
+};
+```
+
+- `use`
+
+```js
+<button class="btn w-64 rounded-full">Button</button>
+```
+
+### `How to add a new custom theme?`
+
+You can add a new theme from `tailwind.config.js` file. In below example, I added a new theme called `mytheme` and I'm also including `dark` and `cupcake` themes.
+
+- The first theme (`mytheme`) will be the default theme.
+
+* `dark` theme will be the default theme for dark mode.
+
+In below example, I have the required colors. All other colors will be generated automatically (Like the color of button when you focus on it or the color of text on a `primary` button).
+
+Inside `tailwind.config.js`
+
+```js
+module.exports = {
+  //...
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: '#a991f7',
+          secondary: '#f6d860',
+          accent: '#37cdbe',
+          neutral: '#3d4451',
+          'base-100': '#ffffff',
+        },
+      },
+      'dark',
+      'cupcake',
+    ],
+  },
+};
+```
+
+### daisyUI Theme Generator
+
+You can add your custom themes to `tailwind.config.js` file in `daisyui > themes` array. In this page, you can pick required color values and see how the components will look like with them.
+
+- Inside `tailwind.config.js`
+
+```js
+module.exports = {
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: '#570DF8',
+
+          secondary: '#F000B8',
+
+          accent: '#37CDBE',
+
+          neutral: '#3D4451',
+
+          'base-100': '#FFFFFF',
+
+          info: '#3ABFF8',
+
+          success: '#36D399',
+
+          warning: '#FBBD23',
+
+          error: '#F87272',
+        },
+      },
+    ],
+  },
+  plugins: [require('daisyui')],
+  //...
+};
+```
+
+## React Router
+
+### `Installation`
+
+This is for use `Route` in the project. For the `Installation` run this commend in your project CMD.
+
+```bash
+ npm install react-router-dom@6
+```
+
+### `DOC`
+
+Once your project is set up and React Router is installed as a dependency, open the `src/index.js` in your text editor. Import `BrowserRouter` from `react-router-dom` near the top of your file and wrap your app in a `<BrowserRouter>`:
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <BrowserRouter>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </BrowserRouter>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+```
+
+Now you can use React Router anywhere in your app! For a simple example, open `src/App.js` and replace the default markup with some routes:
+
+```js
+import * as React from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>Welcome to React Router!</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+      </Routes>
+    </div>
+  );
+}
+```
+
+## React Firebase Hooks
+
+### `Installation`
+
+This is for use `Firebase Authentication` in the project. This make Authentication more simpler For the `Installation` run this commend in your project CMD.
+
+```bash
+# with npm
+npm install --save react-firebase-hooks
+
+# with yarn
+yarn add react-firebase-hooks
+```
+
+### `Documentation`
+
+-[Authentication Hooks](https://github.com/CSFrequency/react-firebase-hooks/tree/master/auth)
+
+## React Bootstrap
+
+I didn't use it here but if you need you can follow the way...!!!
+
+### `Installation`
+
+The best way to consume React-Bootstrap is via the `npm` package which you can install with npm (or `yarn` if you prefer).
+
+```bash
+npm install react-bootstrap bootstrap
+```
+
+### For `CSS`
+
+```js
+{
+  /* The following line can be included in your src/index.js or App.js file*/
+}
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+```
+
+## React Icons
+
+### `Installation`
+
+This is for use `icon` for the project. For the `Installation` run this commend in your project CMD.
+
+```bash
+npm install @react-icons/all-files --save
+```
+
+### `example usage`
+
+```js
+import { FaBeer } from '@react-icons/all-files/fa/FaBeer';
+const ReactComponent = () => {
+  return (
+    <h3>
+      {' '}
+      Lets go for a <FaBeer />?{' '}
+    </h3>
+  );
+};
+```
+
+## React Toastify
+
+### `Installation`
+
+This is for use `toast`for the project. For the `Installation` run this commend in your project CMD.
+
+```bash
+npm install --save react-toastify
+```
+
+### `Demo`
+
+```js
+import React from 'react';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+function App() {
+  const notify = () => toast('Wow so easy!');
+
+  return (
+    <div>
+      <button onClick={notify}>Notify!</button>
+      <ToastContainer />
+    </div>
+  );
+}
+```
+
+## React Helmet Async
+
+### `Installation`
+
+This is for use `helmet`for the project. For the `Installation` run this commend in your project CMD.
+
+```bash
+npm i react-helmet-async
+```
+
+### `Usage`
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+
+const app = (
+  <HelmetProvider>
+    <App>
+      <Helmet>
+        <title>Hello World</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
+      <h1>Hello World</h1>
+    </App>
+  </HelmetProvider>
+);
+
+ReactDOM.hydrate(
+  app,
+  document.getElementById(‘app’)
+);
+```
+
+**Note:!**
+
+<!-- Project End -->
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -39,7 +399,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Learn More About Create React App
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
