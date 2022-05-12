@@ -6,6 +6,8 @@
 
 ## Tailwind CSS
 
+- [Official site & Docs](https://tailwindcss.com/)
+
 ### Create React App
 
 Start by creating a new React project with Create React App if you don't have one already set up.
@@ -72,6 +74,8 @@ export default function App() {
 
 ## daisyUI as a Tailwind CSS plugin
 
+- [daisyUI](https://daisyui.com/)
+
 You need Node.js and Tailwind CSS installed.
 
 ### Install daisyUI:
@@ -121,6 +125,7 @@ module.exports = {
           accent: '#37cdbe',
           neutral: '#3d4451',
           'base-100': '#ffffff',
+          error: '#F87272',
         },
       },
       'dark',
@@ -168,7 +173,7 @@ module.exports = {
 };
 ```
 
-## React Router
+## [React Router](https://reactrouter.com/)
 
 ### `Installation`
 
@@ -225,7 +230,7 @@ function App() {
 }
 ```
 
-## React Firebase Hooks
+## React Firebase Hooks. [npm](https://www.npmjs.com/package/react-firebase-hooks)
 
 ### `Installation`
 
@@ -243,9 +248,9 @@ yarn add react-firebase-hooks
 
 -[Authentication Hooks](https://github.com/CSFrequency/react-firebase-hooks/tree/master/auth)
 
-## React Bootstrap
+## [React Bootstrap](https://react-bootstrap.github.io/)
 
-I didn't use it here but if you need you can follow the way...!!!
+**Note: I didn't use it here but if you need you can follow the way...!!!!**
 
 ### `Installation`
 
@@ -265,7 +270,7 @@ npm install react-bootstrap bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 ```
 
-## React Icons
+## React Icons. [npm](https://www.npmjs.com/package/react-icons)
 
 ### `Installation`
 
@@ -289,7 +294,7 @@ const ReactComponent = () => {
 };
 ```
 
-## React Toastify
+## React Toastify. [npm](https://www.npmjs.com/package/react-toastify)
 
 ### `Installation`
 
@@ -319,7 +324,7 @@ function App() {
 }
 ```
 
-## React Helmet Async
+## React Helmet Async. [npm](https://www.npmjs.com/package/react-helmet-async)
 
 ### `Installation`
 
